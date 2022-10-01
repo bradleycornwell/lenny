@@ -1,4 +1,17 @@
-import { Box, HStack, Link, Image, Flex, Text, Center } from '@chakra-ui/react';
+import {
+	Box,
+	Link,
+	Image,
+	Flex,
+	Text,
+	Center,
+	IconButton,
+	Menu,
+	MenuButton,
+	MenuItem,
+	MenuList,
+} from '@chakra-ui/react';
+import { HamburgerIcon } from '@chakra-ui/icons';
 
 function Header() {
 	const height = { base: '6rem', md: '7.5rem' };
@@ -13,21 +26,32 @@ function Header() {
 			color="yellow.500"
 			bgColor="black"
 		>
-			<Flex justifyContent={'flex-start'} gap="5">
+			<Flex justifyContent={'space-between'} gap="5">
 				<Link href="/">
 					<Box bgColor="white">
 						<Image height={height} src="/logo.svg"></Image>
 					</Box>
 				</Link>
-				<Flex></Flex>
-				<Center>
-					<Text color={'yellow.500'} size={{ base: 'md' }}>
-						Lenny's Star Wars Space
-					</Text>
-				</Center>
-
-				{/* <Link href="Thoughts">Thoughts</Link>
-				<Link href="About">Podcast</Link> */}
+				<Text color={'yellow.500'} size={{ base: 'md' }}>
+					Lenny's Star Wars Space
+				</Text>
+				<Menu>
+					<MenuButton
+						paddingBottom={0}
+						height={'50%'}
+						as={IconButton}
+						aria-label="Navigation"
+						icon={<HamburgerIcon />}
+					/>
+					<MenuList>
+						<Link href="/podcast">
+							<MenuItem color={'black'}>Podcasts</MenuItem>
+						</Link>
+						<Link href="/drawings">
+							<MenuItem color={'black'}>Drawings</MenuItem>
+						</Link>
+					</MenuList>
+				</Menu>
 			</Flex>
 		</Box>
 	);

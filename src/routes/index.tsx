@@ -57,7 +57,7 @@ export function Index() {
 						<Text color="white">
 							They will cover all kinds of Star Wars topics
 						</Text>
-						<Link href="/thoughts">
+						<Link href="/podcast">
 							<Button
 								variant={'secondary'}
 								size={{ base: 'xs', md: 'md' }}
@@ -88,6 +88,33 @@ export function Index() {
 						<Button size={{ base: 'xs', md: 'md' }}>
 							Click here for Lenny's thoughts
 						</Button>
+					</Link>
+				</Flex>
+				<Flex
+					bgColor="black"
+					mt="0"
+					p="2rem"
+					gap="5"
+					flexDir={{ base: 'column', md: 'row' }}
+				>
+					<Flex flexDir="column" gap="5" color="yellow.500">
+						<Text color="white">
+							Lenny also has a collection of drawings.
+						</Text>
+						<Text color="white">
+							Some are on display in the gallery
+						</Text>
+						<Link href="/drawings">
+							<Button
+								variant={'secondary'}
+								size={{ base: 'xs', md: 'md' }}
+							>
+								Go to Gallery
+							</Button>
+						</Link>
+					</Flex>
+					<Link href="/drawings" m="auto">
+						<Image borderRadius={'50%'} src="/darth.jfif"></Image>
 					</Link>
 				</Flex>
 			</Box>

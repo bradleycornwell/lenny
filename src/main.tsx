@@ -12,6 +12,7 @@ import Fonts from './Fonts';
 import StarWarsTheme from './theme';
 import { SkipNavLink, SkipNavContent } from '@chakra-ui/skip-nav';
 import Podcast from './routes/podcast';
+import { Drawings } from './routes/drawings';
 
 const router = createBrowserRouter([
 	{
@@ -35,10 +36,10 @@ const router = createBrowserRouter([
 		},
 	},
 	{
-		path: '/thoughts',
-		element: <Thoughts />,
+		path: '/drawings',
+		element: <Drawings />,
 		loader: async () => {
-			return 'thoughts';
+			return 'drawings';
 		},
 	},
 ]);
