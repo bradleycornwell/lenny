@@ -9,6 +9,10 @@ export default function Podcast() {
 			<Link href="/">
 				<Button size={{ base: 'xs', md: 'md' }}>Home</Button>
 			</Link>
+			<audio controls>
+				<source src="pod.mp4" type="audio/mp4" />
+				Your browser does not support the audio element.
+			</audio>
 		</>
 	);
 }
